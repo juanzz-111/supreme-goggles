@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+
+<body>
+
+    <h1>Calculadora</h1>
+
+    <form action="/resultado" method="POST">
+
+        <label>Primeiro número:</label>
+        <input type="number" name="numero1" step="any" required>
+
+        <br><br>
+
+        <label>Operação:</label>
+        <select name="operacao">
+            <option value="+">Adição (+)</option>
+            <option value="-">Subtração (-)</option>
+            <option value="*">Multiplicação (*)</option>
+            <option value="/">Divisão (/)</option>
+        </select>
+
+        <br><br>
+
+        <label>Segundo número:</label>
+        <input type="number" name="numero2" step="any" required>
+
+        <br><br>
+
+        <button type="submit">Calcular</button>
+
+    </form>
+
+    <br>
+
+    <a href="/">Voltar para o início</a>
+
+</body>
+</html>
